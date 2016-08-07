@@ -1,0 +1,21 @@
+{
+  "name": "node-create-file",
+  "version": "0.0.0",
+  "description": "uses node’s fs.writeFile to create the file, returning a Promise that will resolve with boolean `true` or reject with the fs `Error`",
+  "scripts": {
+    "jshint": "jshint ."
+  },
+  "author": "dan entous",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dan-nl/node-create-file.git"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "node-file-exists": "git+https://github.com/dan-nl/node-file-exists.git"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.2"
+  }
+}
