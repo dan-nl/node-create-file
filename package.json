@@ -1,6 +1,6 @@
 {
   "name": "node-create-file",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "uses node’s fs.writeFile to create the file, returning a Promise that will resolve with boolean `true` or reject with the fs `Error`",
   "scripts": {
     "jshint": "jshint ."
