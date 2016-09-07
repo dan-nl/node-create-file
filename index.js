@@ -3,7 +3,6 @@
 /**
  * module dependencies
  */
-var fileExists = require( 'node-file-exists' );
 var fs = require( 'fs' );
 var path = require( 'path' );
 var Promise = require( 'bluebird' );
@@ -13,13 +12,13 @@ var Promise = require( 'bluebird' );
  *
  * @link https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback
  *
- * @param {string|buffer} filepath_name
+ * @param {string|buffer} file_path_name
  * @param {string|buffer} data
  * @param {Object|string} [options]
  *
  * @returns {Promise}
  */
-module.exports = function createFile( filepath_name, data, options ) {
+module.exports = function createFile( file_path_name, data, options ) {
   return new Promise(
     /**
      * @param {Function} resolve
@@ -27,13 +26,13 @@ module.exports = function createFile( filepath_name, data, options ) {
      */
     function ( resolve, reject ) {
       fs.writeFile(
-        filepath_name,
+        file_path_name,
         data,
         options,
         /**
          * @param {Error} err
          */
-        function ( err ) {
+        function callback( err ) {
           if ( err ) {
             reject( err );
           }
